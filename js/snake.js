@@ -5,6 +5,11 @@ var context = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+//make the canvas a multiple of the grid size
+canvas.width = Math.floor(canvas.width / 16) * 16;
+canvas.height = Math.floor(canvas.height / 16) * 16;
+
+
 // the canvas width & height, snake x & y, and the apple x & y, all need to be a multiples of the grid size in order for collision detection to work
 // (e.g. 16 * 25 = 400)
 var grid = 16;
@@ -142,5 +147,3 @@ document.addEventListener("keydown", function (e) {
 
 });
 
-// start the game
-requestAnimationFrame(loop);

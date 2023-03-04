@@ -6,4 +6,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     text-align: center;
+    /* disable scrolling */
+    overflow: hidden;
+}
+
+#snake{
+    margin: 0 auto;
+    border: 1px solid #1c1212;
+    background-color: lightblue;
 }
